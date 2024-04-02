@@ -104,4 +104,18 @@
     transform: scale(1.05); /* Scale up on hover */
     animation-play-state: paused; /* Pause the color animation on hover */
   }
+
+  /* Add this to your existing CSS file */
+.back-button {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
   

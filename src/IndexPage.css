@@ -1,0 +1,49 @@
+/* IndexPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+
+.index-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered {
+  text-align: center;
+}
+
+.project-name {
+  font-family: 'Old Standard TT', serif;
+  font-size: 4em; /* Increase font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.slogan {
+  font-family: 'Old Standard TT', serif;
+  font-size: 2em; /* Increase font size */
+  font-style: italic;
+  color: #888;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  animation: moveButton 2s infinite alternate; /* Added animation for movement */
+}
+
+@keyframes moveButton {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10px); /* Adjust the distance it moves */
+  }
+}
