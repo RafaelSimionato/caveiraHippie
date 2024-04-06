@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+.presentation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.end-presentation-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Style the button on hover */
+.end-presentation-button:hover {
+  background-color: #45a049;
+}
+
+
+.book-container {
+  width: 70%;
+  max-width: 800px;
+  height: 80%;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.page {
+  display: none;
+  height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  font-family: 'Georgia', serif;
+  color: transparent;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Text appearance animation */
+@keyframes textAppear {
+  0% { color: transparent; }
+  100% { color: #333; }
+}
+
+/* Apply animation to all elements except h2 */
+.page.active h1,
+.page.active h3,
+.page.active h4,
+.page.active p {
+  animation: textAppear 2s forwards;
+  /* Adjust animation duration as needed */
+  font-size: 20px; /* Increase font size */
+  font-weight: bold; /* Bold font weight */
+  letter-spacing: 1px; /* Add letter spacing */
+  line-height: 1.5; /* Increase line height for better readability */
+}
+
+
+/* Color-changing text animation for h2 */
+@keyframes colorChange {
+  0% { color: #333; }
+  25% { color: #ff00ff; }
+  50% { color: #00ff00; }
+  75% { color: #0000ff; }
+  100% { color: #333; }
+}
+
+.page.active h2 {
+  animation: colorChange 8s infinite;
+}
+
+.title {
+  font-size: 3rem; /* Adjust the font size as needed */
+  text-align: center;
+  color: #ffffff; /* White color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #ddd; /* Light border color */
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ddd; /* Light text color */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /* Ensure buttons are above the pseudo-elements */
+}
+
+.navigation-buttons button::before,
+.navigation-buttons button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+  z-index: -1;
+  /* Move behind the button */
+}
+
+.navigation-buttons button:hover::before,
+.navigation-buttons button:hover::after {
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+}
+
+/* Metallic blue effect on hover */
+.navigation-buttons button:nth-child(1):hover {
+  background-color: #1c4978; /* Dark metallic blue background color */
+  border-color: #1c4978; /* Dark metallic blue border color */
+  color: #fff; /* White text color */
+}
+
+.navigation-buttons button:nth-child(2):hover {
+  background-color: #0c2c50; /* Darker metallic blue background color */
+  border-color: #0c2c50; /* Darker metallic blue border color */
+  color: #fff; /* White text color */
+}
+
+.presentation-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to bottom right, #0f3057, #0267c1); /* Metallic blue gradient */
+}
+
+.book-container {
+  width: 70%;
+  max-width: 800px;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  border: 1px solid #ccc;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #1c4978; /* Dark metallic blue background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Ensure button is above other elements */
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+.back-button:hover {
+  background-color: #0c2c50; /* Darker metallic blue background color on hover */
+  transform: scale(1.05); /* Scale up on hover for a subtle effect */
+}
+
