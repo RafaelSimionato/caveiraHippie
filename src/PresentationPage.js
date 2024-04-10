@@ -113,7 +113,7 @@ const PresentationPage = () => {
         </div>
         <div className={`page ${currentPage === 4 ? 'active' : ''}`}>
           <p>
-            And what's an art revolution without a museum to celebrate it? Welcome to our Digital Art Museum, where NFTs take center stage. From emerging talents to seasoned veterans, everyone has a chance to shine. Explore, engage, and evaluate with a simple click—like, dislike, or somewhere in between. Leave your mark with comments that spark conversations and connections.
+            And what's an art revolution without a Museum to celebrate it? Welcome to our Digital Art Museum, where NFTs take center stage. From emerging talents to seasoned veterans, everyone has a chance to shine. Explore, engage, and evaluate with a simple click—like, dislike, or somewhere in between. Leave your mark with comments that spark conversations and connections.
           </p>
         </div>
         <div className={`page ${currentPage === 5 ? 'active' : ''}`}>

@@ -18,8 +18,8 @@ const IndexPage = () => {
     return () => clearInterval(interval);
   }, [slogan, projectSlogan]);
 
-  const redirectToPresentationPage = () => {
-    window.location.href = '/PresentationPage';
+  const redirectToSubPlatformSelectionPage = () => {
+    window.location.href = '/SubPlatformSelecionPage';
   };
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const IndexPage = () => {
         <h2 className="slogan">{slogan}</h2>
         <button
           className="start-button"
-          onClick={redirectToPresentationPage}
+          onClick={redirectToSubPlatformSelectionPage}
           style={{ backgroundColor: buttonColor }}
         >
           Get Started
