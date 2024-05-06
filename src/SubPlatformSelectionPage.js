@@ -9,6 +9,7 @@ function SubPlatformSelectionPage() {
                 <button className="sub-platform-button">NFT Creations</button>
                 <button className="sub-platform-button">NFT Network</button>
                 <button className="sub-platform-button">NFT Bazaar</button>
+                <button className="sub-platform-button">HelpEachOther</button>
                 <button className="sub-platform-button">Museu de Artes Digitais
                 </button> 
             </div>
